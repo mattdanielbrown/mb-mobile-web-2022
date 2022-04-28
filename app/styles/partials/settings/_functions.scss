@@ -1,0 +1,28 @@
+
+
+@function fadedColor($color:$color--primary, $alpha:0.25) {
+	@return rgba($color, $alpha);
+}
+
+@function hoverColor($color:$color--primary) {
+	@return darken($color, $hover-color-change);
+}
+
+@function focusColor($color:$color--primary) {
+	@return darken($color, $focus-color-change);
+}
+
+@function activeColor($color:$color--primary) {
+	@return darken($color, $active-color-change);
+}
+
+@function colorFor($color:$color--primary, $for:'hover') {
+	@if($for == 'focus') {
+		@return focusColor($color);
+	} @else if($for == 'active') {
+		@return activeColor($color);
+	} @else {
+		@return hoverColor($color);
+	}
+}
+

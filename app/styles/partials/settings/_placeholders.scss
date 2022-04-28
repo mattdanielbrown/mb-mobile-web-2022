@@ -1,0 +1,84 @@
+
+%list-reset {
+	display         : flex;
+	flex-direction  : column;
+	justify-content : flex-start;
+	list-style      : none;
+	margin          : 0;
+	padding         : 0;
+
+	li {
+		display    : block;
+		list-style : none;
+		margin     : 0;
+		padding    : 0;
+		width      : 100%;
+	}
+
+	@include min-width(560px) {
+		align-content   : center;
+		align-items     : center;
+		flex-direction  : row;
+		justify-content : space-evenly;
+
+		li {
+			display : inline-flex;
+			width   : unset;
+		}
+	}
+}
+
+%visually-hidden {
+	border      : 0             !important;
+	clip        : rect(0 0 0 0) !important;
+	clip-path   : inset(50%)    !important;
+	height      : 1px           !important;
+	margin      : -1px          !important;
+	opacity     : 0             !important;
+	overflow    : hidden        !important;
+	padding     : 0             !important;
+	position    : absolute      !important;
+	visibility  : hidden        !important;
+	white-space : nowrap        !important;
+	width       : 1px           !important;
+}
+
+%container {
+  width     : 90%;
+  //noinspection CssOverwrittenProperties
+  max-width : 768px;
+  //noinspection CssOverwrittenProperties
+  max-width : 68ch;
+  margin    : 0 auto;
+}
+
+%link-reset {
+	text-decoration : none;
+	display : inline-block;
+	line-height : inherit;
+	font-weight : $font-weight--semibold;
+	background-color : transparent;
+	color: $color--primary;
+	cursor : pointer;
+	transition: $transition;
+	&:link {
+		text-decoration  : none;
+		display          : inline-block;
+		line-height      : inherit;
+		font-weight      : $font-weight--semibold;
+		background-color : transparent;
+		color            : $color--primary;
+		cursor           : pointer;
+		transition       : $transition;
+	}
+	&:visited {
+		text-decoration  : none;
+		display          : inline-block;
+		line-height      : inherit;
+		font-weight      : $font-weight--semibold;
+		background-color : transparent;
+		color            : darken($color--primary, 5%);
+		cursor           : pointer;
+		transition       : $transition;
+	}
+}

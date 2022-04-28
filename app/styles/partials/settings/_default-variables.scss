@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Variable Defaults
+   ========================================================================== */
+
+/* ./app/styles/partials/settings/_default-variables.scss
+   ========================================================================== */
+
+/**
+ * Short description using Doxygen-style comment format
+ *
+ * The first sentence of the long description starts here and continues on this
+ * line for a while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * TODO: This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ *
+ */
+
+/*
+ * -----------------------------------------------------------------------------
+ *                            [ Table Of Contents ]
+ * -----------------------------------------------------------------------------
+ *  1. Font Sizes
+ *  2. Font Weights
+ *  3. Font Stacks
+ *  4. Line Heights
+ *  5. Colors
+ *  6. Border Radius
+ *  7. Sizes
+ * -----------------------------------------------------------------------------
+ */
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 1 : Font Sizes
+//——————————————————————————————————————————————————————————————————————————————
+$default--font-size--pixel       : 20px;
+$default--font-size--relative    : 1em;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 2 : Font Weights
+//——————————————————————————————————————————————————————————————————————————————
+$default--font-weight--light     : 300;
+$default--font-weight--normal    : 400;
+$default--font-weight--semibold  : 500;
+$default--font-weight--bold      : 600;
+
+$default--font-weight--heading   : $default--font-weight--bold;
+$default--font-weight--body      : $default--font-weight--normal;
+$default--font-weight--button    : $default--font-weight--bold;
+$default--font-weight--input     : $default--font-weight--normal;
+$default--font-weight--label     : $default--font-weight--semibold;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 3 : Fontstacks
+//——————————————————————————————————————————————————————————————————————————————
+$default--fontstack--fallback     : -apple-system, system-ui, BlinkMacSystemFont,
+"Segoe UI", Roboto, Helvetica, Arial,
+sans-serif, "Apple Color Emoji",
+"Segoe UI Emoji", "Segoe UI Symbol";
+$default--mono-fontstack-fallback : "Menlo", Menlo, "menlo", menlo, monospace;
+$default--fontstack--firacode     : "firacode", "Fira Code", firacode, Fira Code;
+$default--fontstack--inter        : "Inter UI", Inter UI, "Inter" Inter, "inter";
+$default--fontstack--main         : $default--fontstack--inter,
+$default--fontstack--fallback;
+$default--fontstack--mono         : $default--fontstack--firacode,
+$default--mono-fontstack-fallback;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 4 : Line Heights
+//——————————————————————————————————————————————————————————————————————————————
+$default--line-height--base      : 1;
+$default--line-height--text      : 1.5;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 5 : Colors
+//——————————————————————————————————————————————————————————————————————————————
+
+// Basic Colors
+$default--color--header-footer-bg: ghostwhite;
+$default--color--text            : #444444;
+$default--color--background      : #444444;
+$default--color--page-background : #ffffff;
+
+// Color Primitives
+$default--color--indigo         : #6000ff;
+$default--color--darkgray       : #434343;
+$default--color--red            : tomato;
+$default--color--green          : #00c200;
+$default--color--yellow         : yellow;
+$default--color--blue           : #2a2cff;
+
+// Theme Colors
+$default--color--primary         : $default--color--indigo;
+$default--color--secondary       : $default--color--darkgray;
+$default--color--danger          : $default--color--red;
+$default--color--success         : $default--color--green;
+$default--color--warning         : $default--color--yellow;
+$default--color--information     : $default--color--blue;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 6 : Border Radius
+//——————————————————————————————————————————————————————————————————————————————
+$default--border-radius--pixel    : 4px;
+$default--border-radius--relative : 0.25em;
+$default--border-radius           : default--border-radius--pixel;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 7 : Sizes
+//——————————————————————————————————————————————————————————————————————————————
+$default--button-padding          : 0.5em 1em;
+$default--input-padding           : 0.5em 1em;
+$default--input-label-margin      : 1em auto 0.25em;
+$default--heading-margin          : 0 auto 1rem;

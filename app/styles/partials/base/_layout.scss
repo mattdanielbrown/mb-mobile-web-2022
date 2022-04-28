@@ -1,0 +1,221 @@
+//------------------------------------------------------------------------------
+// Containers
+//------------------------------------------------------------------------------
+
+// Extend %container styles to relevant layout selectors
+.container, body > header:first-of-type > hgroup, main > * {
+	@extend %container;
+}
+
+//------------------------------------------------------------------------------
+// Base Elements
+//------------------------------------------------------------------------------
+html {
+	box-sizing : border-box !important;
+}
+*,*::before,*::after {
+	box-sizing : inherit !important;
+}
+html,body {
+	background-color : $color--background;
+	width : 100vw;
+	min-width : 320px;
+	max-width : 100vw;
+	height : 100%;
+	min-height : 100vh;
+	overflow-y : visible;
+	scroll-behavior : smooth;
+}
+body {
+	min-width : 100vw;
+	display : flex;
+	flex-direction : column;
+	justify-content : space-between;
+}
+
+//------------------------------------------------------------------------------
+// Page Regions - Selectors
+//------------------------------------------------------------------------------
+$page-region--nav     : "[role='navigation'], nav";
+$navbar-list          : "[role='navigation'] > ul, nav > ul";
+$page-region--header  : "[role='banner'], body>header:first-of-type";
+$page-region--main    : "[role='main'], main";
+$page-region--footer  : "[role='contentinfo'], body>footer:last-of-type";
+$page-region-selectors: "[role='navigation'], nav, [role='banner'], body>header:first-of-type, [role='main'], main, [role='contentinfo'], body>footer:last-of-type";
+
+//------------------------------------------------------------------------------
+// Page Regions - Styles
+//------------------------------------------------------------------------------
+#{$page-region-selectors} {
+  // position : relative;
+  width : 100%;
+  min-width : 100vw;
+	max-width : 100vw;
+	// overflow-x : hidden;
+	// overflow-y: visible;
+	scroll-behavior: smooth;
+	margin : 0;
+	padding : 0;
+}
+#{$page-region--header} > hgroup, #{$page-region--main} > * {
+  // @extend .container;
+}
+#{$page-region--main} {
+  padding : 1em 0;
+  flex-grow : 1;
+	background-color : $color--page-background;
+  section, article {
+    padding : 1em 0;
+    margin-bottom : 2em;
+  }
+}
+
+#{$page-region--header}, #{$page-region--footer} {
+	background-color : $color--header-footer-bg;
+	padding : 2em 0;
+	margin : 0;
+}
+#{$page-region--footer} {
+  text-align : center;
+  p {
+    line-height : 1 !important;
+    margin : 0 auto;
+    padding : 0;
+    font-size : small;
+    color: gray;
+    font-weight : 600;
+  }
+}
+#{$page-region--header} {
+
+}
+#{$page-region--nav} {
+	background-color : $color--nav-background;
+	color : $color--nav-link-text;
+	transition: $transition;
+}
+#{$navbar-list} {
+	@extend %list-reset;
+	background-color : $color--nav-background;
+	color            : $color--nav-link-text;
+	transition       : $transition;
+	a {
+		background-color : $color--nav-background;
+		color            : $color--nav-link-text;
+		border : solid 2px $color--nav-background;
+		transition       : $transition;
+		padding : 1em 0;
+		display : block;
+		text-align : center;
+		width : 100%;
+		text-decoration : none !important;
+		&:link {
+			background-color : $color--nav-background;
+			color            : $color--nav-link-text;
+			border           : solid 2px $color--nav-background;
+			transition       : $transition;
+			padding          : 1em 0;
+			display          : block;
+			text-align       : center;
+			width            : 100%;
+			text-decoration  : none !important;
+			user-select : none !important;
+			&:hover {
+				background-color : hoverColor($color--nav-background);
+				color            : hoverColor($color--nav-link-text);
+				border-color     : hoverColor($color--nav-background);
+			}
+
+			&:focus {
+				background-color : focusColor($color--nav-background);
+				color            : focusColor($color--nav-link-text);
+				border-color     : $color--primary;
+				outline          : $focus-fx--outline;
+			}
+
+			&:hover {
+				background-color : activeColor($color--nav-background);
+				color            : activeColor($color--nav-link-text);
+				border-color     : activeColor($color--nav-background);
+			}
+		}
+		&:visited {
+			background-color : $color--nav-background;
+			color            : $color--nav-link-text;
+			border           : solid 2px $color--nav-background;
+			transition       : $transition;
+			padding          : 1em 0;
+			display          : block;
+			text-align       : center;
+			width            : 100%;
+			text-decoration  : none !important;
+
+			&:hover {
+				background-color : hoverColor($color--nav-background);
+				color            : hoverColor($color--nav-link-text);
+				border-color     : hoverColor($color--nav-background);
+			}
+
+			&:focus {
+				background-color : focusColor($color--nav-background);
+				color            : focusColor($color--nav-link-text);
+				border-color     : $color--primary;
+				outline          : $focus-fx--outline;
+			}
+
+			&:hover {
+				background-color : activeColor($color--nav-background);
+				color            : activeColor($color--nav-link-text);
+				border-color     : activeColor($color--nav-background);
+			}
+		}
+
+		&:hover {
+			background-color : hoverColor($color--nav-background);
+			color : hoverColor($color--nav-link-text);
+			border-color : hoverColor($color--nav-background);
+		}
+		&:focus {
+			background-color : focusColor($color--nav-background);
+			color            : focusColor($color--nav-link-text);
+			border-color     : $color--primary;
+			outline : $focus-fx--outline;
+		}
+		&:hover {
+			background-color : activeColor($color--nav-background);
+			color            : activeColor($color--nav-link-text);
+			border-color     : activeColor($color--nav-background);
+		}
+
+		&[aria-current="page"] {
+			background-color : darken($color--nav-background, 3%);
+			color            : fadedColor($color--nav-link-text, 0.3);
+			border           : solid 2px darken($color--nav-background, 3%);
+			text-decoration  : none !important;
+			pointer-events: none !important;
+		}
+	}
+}
+
+nav > ul {
+
+	@include min-width(560px) {
+		width     : 90%;
+		//noinspection CssOverwrittenProperties
+		max-width : 768px;
+		//noinspection CssOverwrittenProperties
+		max-width : 68ch;
+		margin    : 0 auto;
+
+		display : flex;
+		flex-direction : row;
+		align-items : center;
+		align-content : center;
+		justify-content : flex-end !important;
+
+		a {
+			display : inline-block;
+			padding : 1em !important;
+		}
+	}
+}

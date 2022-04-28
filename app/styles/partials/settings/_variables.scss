@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/* ./app/styles/partials/settings/_variables.scss
+   ========================================================================== */
+
+/**
+ * Short description using Doxygen-style comment format
+ *
+ * The first sentence of the long description starts here and continues on this
+ * line for a while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * TODO: This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ *
+ */
+
+/*
+ * -----------------------------------------------------------------------------
+ *                            [ Table Of Contents ]
+ * -----------------------------------------------------------------------------
+ *  1. Font Sizes
+ *  2. Font Weights
+ *  3. Font Stacks
+ *  4. Line Heights
+ *  5. Colors
+ *  6. Border Radius
+ *  7. Sizes
+ * -----------------------------------------------------------------------------
+ */
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 1 : Font Sizes
+//——————————————————————————————————————————————————————————————————————————————
+$font-size--pixel        : $default--font-size--pixel       !default;
+$font-size--relative     : $default--font-size--relative    !default;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 2 : Font Weights
+//——————————————————————————————————————————————————————————————————————————————
+$font-weight--light      : $default--font-weight--light     !default;
+$font-weight--normal     : $default--font-weight--normal    !default;
+$font-weight--semibold   : $default--font-weight--semibold  !default;
+$font-weight--bold       : $default--font-weight--bold      !default;
+
+$font-weight--heading    : $font-weight--bold               !default;
+$font-weight--body       : $font-weight--normal             !default;
+$font-weight--button     : $font-weight--bold               !default;
+$font-weight--input      : $font-weight--normal             !default;
+$font-weight--label      : $font-weight--semibold           !default;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 3 : Fontstacks
+//——————————————————————————————————————————————————————————————————————————————
+$fontstack--fallback     : $default--fontstack--fallback !default;
+$mono-fontstack-fallback : $default--fontstack--mono !default;
+$fontstack--firacode     : $default--fontstack--firacode !default;
+$fontstack--inter        : $default--fontstack--inter !default;
+$fontstack--main         : $fontstack--inter, $fontstack--fallback !default;
+$fontstack--mono         : $fontstack--firacode, $mono-fontstack-fallback !default;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 4 : Line Heights
+//——————————————————————————————————————————————————————————————————————————————
+$line-height--base       : $default--line-height--base !default;
+$line-height--text       : $default--line-height--text !default;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 5 : Colors
+//——————————————————————————————————————————————————————————————————————————————
+
+// Basic Colors
+$color--header-footer-bg : $default--color--header-footer-bg !default;
+$color--text             : $default--color--text !default;
+$color--background       : $default--color--background !default;
+$color--page-background  : $default--color--page-background !default;
+
+// Color Primitives
+$color--indigo           : $default--color--indigo !default;
+$color--darkgray         : $default--color--darkgray !default;
+$color--red              : $default--color--red !default;
+$color--green            : $default--color--green !default;
+$color--yellow           : $default--color--yellow !default;
+$color--blue             : $default--color--blue !default;
+
+// Theme Colors
+$color--primary          : $color--indigo;
+$color--secondary        : $color--darkgray;
+$color--danger           : $color--red;
+$color--success          : $color--green;
+$color--warning          : $color--yellow;
+$color--information      : $color--blue;
+
+// Other Colors
+$color--nav-background   : #434343;
+$color--nav-link-text    : #ffffff;
+$color--nav-link-bg      : $color--nav-background;
+$color--link-text        : $color--primary;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 6 : Border Radius
+//——————————————————————————————————————————————————————————————————————————————
+$border-radius--pixel    : $default--border-radius--pixel !default;
+$border-radius--relative : $default--border-radius--relative !default;
+$border-radius           : $border-radius--pixel !default;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 7 : Sizes
+//——————————————————————————————————————————————————————————————————————————————
+$button-padding          : $default--button-padding !default;
+$input-padding           : $default--input-padding !default;
+$input-label-margin      : $default--input-label-margin !default;
+$heading-margin          : $default--heading-margin !default;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 8 : Transitions & Animations
+//——————————————————————————————————————————————————————————————————————————————
+$transition--duration     : 200ms !default;
+$transition--function     : ease  !default;
+$transition--properties   : all   !default;
+$transition               : $transition--properties
+														$transition--duration
+														$transition--function !default;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 10 : Interaction Changes
+//——————————————————————————————————————————————————————————————————————————————
+$hover-color-change   : 8%  !default;
+$focus-color-change   : 12% !default;
+$active-color-change  : 16% !default;
+
+//——————————————————————————————————————————————————————————————————————————————
+// Section 11 : Focus Effect
+//——————————————————————————————————————————————————————————————————————————————
+$focus-fx--color       : $color--primary !default;
+$focus-fx--alpha       : 0.25 !default;
+$focus-fx--faded-color : rgba($focus-fx--color,$focus-fx--alpha) !default;
+$focus-fx--width       : 4px !default;
+$focus-fx--boxshadow   : 0 0 0 $focus-fx--width $focus-fx--faded-color !default;
+$focus-fx--outline     : $focus-fx--faded-color solid $focus-fx--width !default;
+$focus-fx--offset      : -2px !default;
+$focus-fx--use-outline : "use_outline" !default;
+$focus-fx--use-shadow  : "use_shadow" !default;
+$focus-fx--config      : $focus-fx--use-outline !default;

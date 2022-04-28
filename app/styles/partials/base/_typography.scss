@@ -1,0 +1,74 @@
+
+
+html {
+	font-size-adjust: none;
+	font-size : $default--font-size--pixel;
+}
+
+html,body,p,button,input,textarea,legend,label,li,ul,ol,details,summary,em,
+strong,sub,sup,ins,del,mark,blockquote,q,cite,figcaption,figure,caption,table,
+a, h1,h2,h3,h4,h5,h6 {
+	font-family : $fontstack--main;
+	line-height : $line-height--base;
+	font-weight : $font-weight--normal;
+	color: $color--text;
+	margin : 0 auto;
+	padding : 0;
+}
+
+p {
+	line-height : 1.5;
+	margin : 0 auto 1em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight : $font-weight--heading;
+	margin : $heading-margin;
+}
+
+label {
+	font-weight : $font-weight--label;
+	margin: $input-label-margin;
+}
+
+input, textarea {
+	font-weight : $font-weight--input;
+}
+
+a {
+	font-weight : $font-weight--semibold;
+	line-height : inherit;
+	color: $color--primary;
+	cursor : pointer;
+	transition : $transition;
+}
+
+section > h3:first-child {
+	margin-top : 0;
+	margin-bottom : 1em;
+}
+
+section > h4 {
+	margin-top : 2rem;
+}
+
+main ul,ol,dl {
+	& > * {
+		line-height : 2;
+		margin-left : 1.5em;
+		&:first-child {
+			margin-top : 0 !important;
+		}
+		&:last-child {
+			margin-bottom : 2em !important;
+		}
+	}
+}
+dt,dd {
+	margin-left : 0 !important;
+}
+dd {
+	margin-bottom : 1em;
+}
+
