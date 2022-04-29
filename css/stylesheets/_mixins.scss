@@ -4,6 +4,12 @@
   }
 }
 
+@mixin max-width($size:559px) {
+  @media screen and (min-width : $size) {
+    @content;
+  }
+}
+
 @mixin set-color-for-properties($color:$primary,$properties...) {
   $_this-hover-color  : hover-color($color);
   $_this-focus-color  : focus-color($color);
