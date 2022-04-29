@@ -1,0 +1,12 @@
+<component name="CopyrightManager">
+  <settings default="Matt Daniel Brown 2021 Copyright Profile">
+    <module2copyright>
+      <element module="All" copyright="Matt Daniel Brown 2021 Copyright Profile" />
+    </module2copyright>
+    <LanguageOptions name="__TEMPLATE__">
+      <option name="addBlankAfter" value="false" />
+      <option name="separateBefore" value="true" />
+      <option name="separateAfter" value="true" />
+    </LanguageOptions>
+  </settings>
+</component>

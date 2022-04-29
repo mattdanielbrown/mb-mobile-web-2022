@@ -1,0 +1,53 @@
+
+
+
+
+html,body,p,label,input,button,a,h1,h2,h3,h4,h5,h6,select,option,textarea {
+  font-family : $font-family;
+  line-height : 1;
+}
+
+html {
+  font-size : 20px;
+}
+body {
+  font-size : 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height : 1;
+  margin : 0 auto 1rem;
+  color: #444;
+  font-weight : 600;
+}
+p {
+  line-height : 1.5;
+  margin : 0 auto 1em;
+  color: #444;
+  font-weight : normal;
+  font-size : 1em;
+}
+button,input,label,textarea,option {
+  line-height : 1;
+  font-size : 1em;
+}
+label {
+  font-weight : 500;
+  color: #444;
+}
+input {
+  color : #444444;
+  &::placeholder, &::placeholder, &:placeholder-shown, &:placeholder-shown {
+    color: gray;
+  }
+}
+body>footer:last-of-type {
+  p {
+    text-align : center;
+    font-size : small;
+    margin : 0 auto;
+    padding : 0;
+    color: gray;
+    line-height : 1;
+    font-weight : 500;
+  }
+}

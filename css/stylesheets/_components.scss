@@ -1,0 +1,141 @@
+
+
+// %button-base {
+//   appearance : none;
+//   cursor : pointer;
+//   font-size : 1em;
+//   line-height : 1;
+//   color: $color--secodary;
+//   border : lightgray solid 2px;
+//   background-color : lightgray;
+//   padding : .5em 1em;
+//   border-radius : 4px;
+//   font-weight : 600;
+//   letter-spacing : .5px;
+// }
+
+// Button Base Placeholder
+%button-base {
+  appearance          : none !important;
+  user-select         : none !important;
+  backface-visibility : hidden !important;
+  display             : block;
+  cursor              : pointer !important;
+  width               : $button_block-width;
+  min-width           : $button_min-width;
+  font-family         : $font-family;
+  line-height         : $button_line-height !important;
+  font-size           : $button_font-size;
+  font-weight         : $button_font-weight;
+  border-radius       : $button_border-radius;
+  // padding							: $button_padding;
+  padding             : $button_small-screen-padding;
+  letter-spacing      : $button_letter-spacing;
+  color               : $color_gray;
+  background-color    : $button--default_bg-color;
+  border-style        : $button_border-style;
+  border-width        : $button_border-width;
+  border-color        : $button--default_bg-color;
+  transition          : $button_transition;
+  transform           : translate3d(0, 0, 0);
+  // height							: $button_height;
+  height              : $button_small-screen-height;
+
+  margin              : $button_block-margin !important;
+
+  &:active {
+    $_this-color: darken($button--default_bg-color, 8%);
+    transform : $button_active-transform;
+    border-color     : $_this-color !important;
+    background-color : $_this-color;
+  }
+  &:focus {
+    outline      : none;
+    border-color : $primary-color !important;
+    background-color : darken($button--default_bg-color, 8%);
+    box-shadow   : $focus-fx;
+  }
+
+  @include min-width(640px) {
+    display     : inline-block;
+    width       : $button_inline-width;
+    margin      : $button_inline-margin !important;
+    //noinspection CssOverwrittenProperties
+    line-height : $button_line-height !important;
+    //noinspection CssOverwrittenProperties
+    line-height : 1 !important;
+    height      : $button_height !important;
+    padding     : $button_padding !important;
+    &:last-of-type, &:last-child {
+      margin-right : 0 !important;
+    }
+  }
+}
+
+// Apply Button Styles to Button Selectors
+#{$button-selectors} {
+  @extend %button-base;
+}
+
+// Button Variants
+.primary {
+  @include set-color-for-properties($primary, background-color, border-color);
+  @include set-color-for-properties(#ffffff, color);
+}
+.secondary {
+  @include set-color-for-properties($secondary, background-color, border-color);
+  @include set-color-for-properties(#ffffff, color);
+}
+.outline, .ghost {
+  background-color : transparent;
+  font-weight      : 500;
+  letter-spacing   : $button_outline-letter-spacing !important;
+  $_this-color     : darken($button--default_bg-color, 45%);
+  @include set-color-for-properties($_this-color, color, border-color);
+  @include set-outline-button-bg-colors($_this-color);
+
+  &.primary {
+    @include set-color-for-properties($primary, color, border-color);
+    @include set-outline-button-bg-colors();
+  }
+
+  &.secondary {
+    @include set-color-for-properties($secondary, color, border-color);
+    @include set-outline-button-bg-colors($secondary);
+  }
+}
+.round, .rounded {
+  border-radius : 2em !important;
+}
+// button,[type="button"],[type="submit"],[type="reset"],[role="button"],.button {
+//   @extend %button-base;
+// }
+
+ul.button-list,ul.buttons,ul.buttons-list {
+  list-style : none;
+  margin : 0;
+  padding : 0;
+  width : 100%;
+  text-align : left;
+  li {
+    list-style : none;
+    margin     : 0;
+    padding    : 0;
+  }
+
+  @include min-width(560px) {
+    display : flex;
+    flex-direction : row;
+    // align-items : center;
+    // align-content : center;
+    justify-content : space-evenly;
+    text-align : left;
+    flex-wrap : wrap;
+    li {
+      text-align : left;
+      display : inline-block;
+      width : unset;
+      margin : 0;
+    }
+  }
+}

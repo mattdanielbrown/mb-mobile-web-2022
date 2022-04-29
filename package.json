@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "Matt Daniel Brown",
+    "email": "mattdbrown@protonmail.com"
+  },
+  "description": "Mobile Web Techniques in 2022.",
+  "license": "MIT",
+  "name": "mb-mobile-web-2022",
+  "source": "index.html",
+  "browserslist": [
+    "> 0.5%, last 2 versions, not dead"
+  ],
+  "devDependencies": {
+    "parcel": "latest",
+    "parcel-bundler": "^1.3.1",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.3",
+    "sass": "^1.51.0"
+  },
+  "scripts": {
+    "styles": "parcel build css/main.scss",
+    "build": "parcel build index.html",
+    "dev": "parcel index.html",
+    "start": "yarn run styles && yarn run build && yarn run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "bourbon": "^7.2.0",
+    "inter-ui": "^3.19.3",
+    "mobi.css": "^3.1.1",
+    "reseter.css": "^2.0.0",
+    "sanitize.css": "^13.0.0"
+  }
+}

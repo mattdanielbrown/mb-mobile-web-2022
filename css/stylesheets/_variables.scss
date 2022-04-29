@@ -1,0 +1,76 @@
+
+$font-family:"Inter UI","Inter",Inter UI,Inter,-apple-system,BlinkMacSystemFont,
+system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,
+"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+$color--primary: #6000ff;
+$color--secodary:#434343;
+$color--navbar-bg: $color--secodary;
+$color--navbar-color: white;
+
+
+
+$primary                       : #700fff;
+$secondary                     : #434343;
+$color_gray-lightest           : #dddddd;
+$color_gray-lighter            : lightgray;
+$color_gray-light              : darkgray;
+$color_gray                    : #444444;
+$color_gray-dark               : #333333;
+$color_gray-darker             : #222222;
+$color_gray-darkest            : #111111;
+
+$secondary-color               : #434343;
+
+$browser-context               : 18;
+
+$default_transition            : all 120ms;
+$default_untransform           : translate3d(0, 0, 0);
+
+$button_font-family            : $font-family;
+$button_font-size              : 1em;
+$button_font-weight            : 600;
+$button_line-height            : 1.125;
+$button_border-radius          : .25em;
+$button_border-style           : solid;
+$button_border-width           : 2px;
+$button_padding                : .5em .75em;
+$button_small-screen-padding   : .75em 0;
+$button_cursor                 : pointer;
+$button_transition             : $default_transition;
+$button_untransform            : $default_untransform;
+$button_active-transform       : translate3d(0, 2px, 0);
+$button_letter-spacing         : 0.5px;
+$button_outline-letter-spacing : 0.75px;
+$button_height                 : 2.25em;
+$button_small-screen-height    : 2.75em;
+$button_block-width            : 100%;
+$button_inline-width           : auto;
+$button_min-width              : 7em;
+$button_inline-margin          : 0 1em 1em 0;
+$button_block-margin           : 1em 0 2em 0;
+
+$button--default_bg-color      : $color_gray-lightest;
+$button--default_border-color  : $color_gray-light;
+$button--default_text-color    : $color_gray;
+
+$hover-color-adjustment        : 10%;
+$focus-color-adjustment        : 15%;
+$active-color-adjustment       : 20%;
+
+$primary-color                 : #601fff;
+$color_primary                 : $primary-color;
+$focus-fx-alpha                : 0.25;
+$focus-fx-width                : 3px;
+$focus-fx-color                : rgba($color_primary, $focus-fx-alpha);
+$focus-fx                      : 0 0 0 $focus-fx-width $focus-fx-color;
+
+
+
+$_default                      : $primary-color;
+
+
+$heading-selectors : ("h1,h2,h3,h4,h5,h6");
+$button-selectors  : ("button, [role=\"button\"]",
+"[type=\"button\"],[type=\"reset\"],[type=\"submit\"]",
+".button, .btn");

@@ -1,0 +1,31 @@
+
+
+@function hoverColor($color: $color--primary) {
+  @return darken($color, 8%);
+}
+
+@function focusColor($color: $color--primary) {
+  @return darken($color, 16%);
+}
+
+@function activeColor($color: $color--primary) {
+  @return darken($color, 24%);
+}
+
+
+@function em($pixels, $context: $browser-context) {
+  @return ($pixels / $context) * 1em;
+}
+
+@function hover-color($base-color : $primary-color) {
+  @return darken($base-color, $hover-color-adjustment);
+}
+
+@function focus-color($base-color : $primary-color) {
+  @return darken($base-color, $focus-color-adjustment);
+}
+
+@function active-color($base-color: $primary-color) {
+  @return darken($base-color, $active-color-adjustment);
+}
+

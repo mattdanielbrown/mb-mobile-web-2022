@@ -1,0 +1,28 @@
+@mixin min-width($size:560px) {
+  @media screen and (min-width : $size) {
+    @content;
+  }
+}
+
+@mixin set-color-for-properties($color:$primary,$properties...) {
+  $_this-hover-color  : hover-color($color);
+  $_this-focus-color  : focus-color($color);
+  $_this-active-color : active-color($color);
+
+  @each $property in $properties {
+    #{$property}: $color;
+    &:hover  { #{$property}  : $_this-hover-color; }
+    &:focus  { #{$property}  : $_this-focus-color; }
+    &:active { #{$property}  : $_this-active-color; }
+  }
+}
+
+@mixin set-outline-button-bg-colors($color:$primary) {
+  $_this-color                : $color;
+  $_outline-bg-color--hover   : rgba($_this-color, 0.1);
+  $_outline-bg-color--focus   : rgba($_this-color, 0.2);
+  $_outline-bg-color--active  : rgba($_this-color, 0.3);
+  &:hover { background-color  : $_outline-bg-color--hover; }
+  &:focus { background-color  : $_outline-bg-color--focus; }
+  &:active { background-color : $_outline-bg-color--active;}
+}
